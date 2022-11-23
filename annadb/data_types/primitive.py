@@ -92,6 +92,14 @@ class Bool(PrimitiveBase):
             return self.value is other
         return super(Bool, self).__eq__(other)
 
+    @property
+    def pretty_value(self):
+        return f"[{self.value_color}]{str(self.value).lower()}[/{self.value_color}]"
+
+    @property
+    def html_value(self):
+        return f'<span class="value_{self.instance_type}">{str(self.value).lower()}</span>'
+
 
 class Null(PrimitiveBase):
     prefix = NULL
