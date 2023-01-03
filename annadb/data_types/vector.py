@@ -48,6 +48,12 @@ class VectorBase(TysonItem):
         console.new_line()
         console.add_text("]")
 
+    def __repr__(self):
+        return self._value.__repr__()
+
+    def __str__(self):
+        return self._value.__str__()
+
 
 class Vector(VectorBase):
     prefix = STORAGE_VECTOR

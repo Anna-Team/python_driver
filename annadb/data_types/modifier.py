@@ -17,3 +17,9 @@ class ModifierBase(TysonItem):
         console.add_text(f"{self.html_prefix}(")
         self.value.to_html(console)
         console.add_text(")")
+
+    def __repr__(self):
+        return f"{self.prefix}({self.value.__repr__()})"
+
+    def __str__(self):
+        return f"{self.prefix}({self.value.__str__()})"
