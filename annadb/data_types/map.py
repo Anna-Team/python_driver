@@ -18,6 +18,12 @@ class MapBase(TysonItem):
     def __len__(self):
         return len(self._value)
 
+    def __repr__(self):
+        return self._value.__repr__()
+
+    def __str__(self):
+        return self._value.__str__()
+
 
 class MapUnique(MapBase):
     def __init__(self, data: Optional[dict] = None):

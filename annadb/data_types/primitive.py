@@ -48,6 +48,12 @@ class PrimitiveBase(TysonItem):
             return self.prefix == other.prefix and self.value == other.value
         return False
 
+    def __repr__(self):
+        return self.value.__repr__()
+
+    def __str__(self):
+        return self.value.__str__()
+
 
 class String(str, PrimitiveBase):
     value_color = "bright_green"
