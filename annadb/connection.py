@@ -30,7 +30,6 @@ class Connection:
             else:
                 data.append(to_str(query_set))
         data = ";".join(data)
-        print("Sending query:", data)
         self.socket.send_string(data)
         raw_response = self.socket.recv_string()
         response = Journal.deserialize(raw_response)
