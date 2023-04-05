@@ -1,11 +1,10 @@
-from annadb import root
-from annadb.query.project.operators import Keep
+from annadb import root, keep
 
 
 class TestProject:
     def test_keep(self, collection, objects):
         resp = collection.find().sort(+root.name).project(
-            {"name": Keep(), "d": Keep()}
+            {"name": keep, "d": keep}
         ).run()
         for i, (k, v) in enumerate(resp.data.items()):
             assert set(v._value.keys()) == {"name", "d"}
@@ -35,7 +34,7 @@ class TestProject:
                     "test": root.smth
                 },
                 "d": {
-                    "smth2": Keep()
+                    "smth2": keep
                 }
             }
         ).run()
@@ -48,7 +47,7 @@ class TestProject:
         resp = collection.find().sort(+root.name).project(
             {
                 "name": [root.smth],
-                "l": ["TEST", Keep(), Keep()]
+                "l": ["TEST", keep, keep]
             }
         ).run()
         for i, (k, v) in enumerate(resp.data.items()):
