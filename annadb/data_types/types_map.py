@@ -42,7 +42,9 @@ from annadb.constants import (
     DESC_OPERATOR,
     QUERY_SET,
     LIMIT_QUERY,
-    OFFSET_QUERY, KEEP_OPERATOR,
+    OFFSET_QUERY,
+    KEEP_OPERATOR,
+    PROJECT_QUERY,
 )
 from annadb.data_types.map import Map
 from annadb.data_types.primitive import (
@@ -69,7 +71,7 @@ from annadb.query.types import (
     Delete,
     Sort,
     Limit,
-    Offset,
+    Offset, Project,
 )
 from annadb.query.update.operators import Set, Inc
 from annadb.response import (
@@ -107,6 +109,7 @@ types_map = {
     SORT_QUERY: Sort,
     LIMIT_QUERY: Limit,
     OFFSET_QUERY: Offset,
+    PROJECT_QUERY: Project,
     # FIND OPERATORS
     EQ_OPERATOR: Eq,
     NEQ_OPERATOR: Neq,
