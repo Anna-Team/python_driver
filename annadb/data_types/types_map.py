@@ -42,7 +42,7 @@ from annadb.constants import (
     DESC_OPERATOR,
     QUERY_SET,
     LIMIT_QUERY,
-    OFFSET_QUERY,
+    OFFSET_QUERY, KEEP_OPERATOR,
 )
 from annadb.data_types.map import Map
 from annadb.data_types.primitive import (
@@ -58,6 +58,7 @@ from annadb.data_types.primitive import (
 from annadb.data_types.vector import Vector
 from annadb.query.find.operators import Eq, Neq, Gt, Gte, Lt, Lte, And, Or, Not
 from annadb.query.path import Path
+from annadb.query.project.operators import Keep
 from annadb.query.query_set import QuerySet
 from annadb.query.sort.operators import Asc, Desc
 from annadb.query.types import (
@@ -122,6 +123,8 @@ types_map = {
     # SORT OPERATORS
     ASC_OPERATOR: Asc,
     DESC_OPERATOR: Desc,
+    # PROJECTION OPERATORS
+    KEEP_OPERATOR: Keep,
     # RESPONSE
     RESPONSE_OBJECTS: Objects,
     RESPONSE_IDS: IDs,

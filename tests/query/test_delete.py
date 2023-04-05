@@ -1,5 +1,3 @@
-from pprint import pprint
-
 from annadb.data_types.constants import root
 
 
@@ -28,5 +26,4 @@ class TestDelete:
         resp_delete = collection.get(primitives.data[0]).delete().run()
         assert resp_delete.meta.count == 1
         resp = collection.all().run()
-        pprint(resp.data.items())
         assert len(resp.data) == primitives.meta.count - 1

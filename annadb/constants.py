@@ -21,6 +21,7 @@ DELETE_QUERY: str = "delete"
 SORT_QUERY: str = "sort"
 OFFSET_QUERY: str = "offset"
 LIMIT_QUERY: str = "limit"
+PROJECT_QUERY: str = "project"
 
 # FIND OPERATORS
 EQ_OPERATOR: str = "eq"
@@ -42,6 +43,9 @@ INC_OPERATOR: str = "inc"
 # SORT OPERATORS
 ASC_OPERATOR: str = "asc"
 DESC_OPERATOR: str = "desc"
+
+# PROJECT OPERATORS
+KEEP_OPERATOR: str = "keep"
 
 # RESPONSE
 RESPONSE_OBJECTS: str = "objects"

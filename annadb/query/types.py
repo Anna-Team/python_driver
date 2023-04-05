@@ -6,8 +6,9 @@ from annadb.constants import (
     UPDATE_QUERY,
     OFFSET_QUERY,
     LIMIT_QUERY,
-    DELETE_QUERY,
+    DELETE_QUERY, PROJECT_QUERY,
 )
+from annadb.data_types.map import MapUnique
 from annadb.data_types.modifier import ModifierBase
 from annadb.data_types.primitive import PrimitiveBase
 from annadb.data_types.vector import VectorBase
@@ -46,3 +47,7 @@ class Delete(PrimitiveBase):
 
     def __init__(self, _=None):
         super(Delete, self).__init__(None)
+
+
+class Project(MapUnique):
+    prefix = PROJECT_QUERY
