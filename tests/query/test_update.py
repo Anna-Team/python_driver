@@ -42,7 +42,6 @@ class TestUpdateSet:
         ).run()
         resp = collection.find().run()
         for k, v in resp.data.items():
-            print(v.items())
             assert v["a"] == "b"
 
 

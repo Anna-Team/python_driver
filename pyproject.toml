@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "annadb"
-version = "0.1.3"
+version = "0.1.4"
 description = "AnnaDB driver and shell"
 authors = ["Roman Right <roman-right@protonmail.com>"]
 

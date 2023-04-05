@@ -58,3 +58,10 @@ class FindInterface(BaseQuery):
         return UpdateQuery(
             *args, query_set=self.query_set, collection=self.collection
         )
+
+    def project(self, projection: dict):
+        from annadb.query.project.query import ProjectQuery
+
+        return ProjectQuery(
+            projection, query_set=self.query_set, collection=self.collection
+        )
