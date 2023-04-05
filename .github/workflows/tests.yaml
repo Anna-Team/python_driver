@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build And Run DB
-        run: docker run -d --init -p 10001:10001 -t romanright/annadb:0.1.0
+        run: docker run -d --init -p 10001:10001 -t romanright/annadb:0.2.0
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
